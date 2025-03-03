@@ -1,5 +1,3 @@
-```markdown
-// filepath: /C:/Users/tomclaes/OneDrive - Microsoft/back up laptop 3/emergent2025/azureopenaitutorial/README.md
 # Azure OpenAI Tutorial
 
 **Purpose**  
@@ -7,4 +5,3 @@ This repository demonstrates how to integrate Azure OpenAI (GPT-4) into a Python
 
 **Goal**  
 The main goal is to provide a clear example of how Azure OpenAI can be leveraged to build intelligent applications, emphasizing maintainability, scalability, and secure handling of credentials.
-```
