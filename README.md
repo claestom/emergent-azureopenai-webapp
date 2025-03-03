@@ -37,6 +37,10 @@ Open the .env file and add following content + the values:
 AZURE_OPENAI_KEY = ""
 AZURE_OPENAI_ENDPOINT = ""
 ```
+Save it:
+```
+CTRL + S
+```
 Create and activate virtual environment:
 ```
 python -m venv . ; .\Scripts\Activate.ps1
