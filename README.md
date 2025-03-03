@@ -1,10 +1,12 @@
 # Azure OpenAI & Web App Tutorial
 
-**Purpose**  
-This repository demonstrates how to integrate Azure OpenAI (GPT-4) into a Python application, focusing on seamless chatbot functionality and showcasing best practices for using OpenAI services on Azure.
+This repository demonstrates the development of a Python and Flask application that leverages the Azure OpenAI endpoint to ask questions and receive responses. The process includes:
 
-**Goal**  
-The main goal is to provide a clear example of how Azure OpenAI can be leveraged to build intelligent applications, emphasizing maintainability, scalability, and secure handling of credentials.
+1. Loceally developing the application using Python and Flask.
+2. Building a Docker image of the application.
+3. Publishing the Docker image to Azure Container Registry (ACR).
+4. Deploying the Docker image from ACR to an Azure Web App to run the application.
+
 
 ## How to get started?
 
