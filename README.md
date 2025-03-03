@@ -17,7 +17,7 @@ Create following resources:
 ### Local development
 
 ```
-mkdir mkdir emergentproject2025; cd emergentproject2025
+mkdir emergentproject2025; cd emergentproject2025
 ```
 ```
 git clone https://github.com/claestom/emergent-azureopenai-webapp.git ; cd "emergent-azureopenai-webapp"
