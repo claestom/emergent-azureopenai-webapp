@@ -103,10 +103,11 @@ az group create -n $ResourceGroup -l $Location
 Create an Azure Container Registry
 ```
 az acr create --resource-group $ResourceGroup --name $AcrName --sku Basic --location $Location
+```
 
 ### Push Docker image to Azure Container Registry in Azure
 
-Login to your ACR
+Login to your ACR and publish the image to the ACR (replace *name* with the ACR name)
 ```
 docker login <name>.azurecr.io
 ```
