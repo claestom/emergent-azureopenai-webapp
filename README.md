@@ -78,6 +78,32 @@ Check if the container is running
 ```
 docker ps
 ```
+Test it out using a seperate terminal:
+```
+curl -X POST -H "Content-Type: application/json" -d "{\"query\": \"Explain me the history of Leuven?\"}"  http://localhost:5000
+```
+### Prepare cloud environment
+
+Log in to Azure:
+```
+az login
+```
+Follow the instructions & select the right subscription.
+
+Set variables:
+```
+$ResourceGroup = "rg-emergent-workshop"
+$Location = "westeurope"
+$AcrName = "acremergentworkshop" + (Get-Random -Minimum 1 -Maximum 1001)
+```
+Next, create a resource group
+```
+az group create -n $ResourceGroup -l $Location
+```
+Create an Azure Container Registry
+```
+az acr create --resource-group $ResourceGroup --name $AcrName --sku Basic --location $Location
+
 ### Push Docker image to Azure Container Registry in Azure
 
 Login to your ACR
@@ -97,5 +123,5 @@ More information [here](https://learn.microsoft.com/en-us/azure/app-service/tuto
 
 Test the WebbApp:
 ```
-curl -X POST -H "Content-Type: application/json" -d "{\"query\": \"Explain me what Emergent Leuven is?\"}"  https://<WebbAppName>.azurewebsites.net/
+curl -X POST -H "Content-Type: application/json" -d "{\"query\": \"Explain me what Emergent Leuven is?\"}"  https://<WebAppName>.azurewebsites.net/
 ```
