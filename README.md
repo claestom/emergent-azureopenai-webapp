@@ -55,7 +55,7 @@ python app.py
 ```
 Test it out using a seperate terminal:
 ```
-curl -X POST -H "Content-Type: application/json" -d "{\"query\": \"Explain me what Emergent Leuven is?\"}"  http://localhost:5000
+curl -X POST -H "Content-Type: application/json" -d "{\"query\": \"Explain me the history of Leuven?\"}"  http://localhost:5000
 ```
 Stop de application:
 ```
