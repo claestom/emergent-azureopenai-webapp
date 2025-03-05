@@ -74,6 +74,10 @@ After image has been create, start it in a container:
 ```
 docker run -it -d -p 5000:5000 azure-openai-flask-demo
 ```
+Check if the container is running
+```
+docker ps
+```
 ### Push Docker image to Azure Container Registry in Azure
 
 Login to your ACR
