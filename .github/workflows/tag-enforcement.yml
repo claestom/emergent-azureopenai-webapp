@@ -1,0 +1,33 @@
+name: Enforce Tagging
+
+# on:
+#   repository_dispatch:
+#     types: [created]
+    
+on:
+    schedule:
+        - cron: '0 0 * * *' # Runs daily at midnight
+    workflow_dispatch:
+
+jobs:
+  check-tags:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check for required tags
+      run: |
+        TAG_KEY="workload"
+        REQUIRED_TAGS=("Infrastructure" "Data" "AI" "App Innovation" "Other")
+        TAG_FOUND=false
+
+        for TAG in "${REQUIRED_TAGS[@]}"; do
+          if [[ $(git log -1 --pretty=%B) == *"${TAG_KEY}: ${TAG}"* ]]; then
+            TAG_FOUND=true
+            break
+          fi
+        done
+
+        if [ "$TAG_FOUND" = false ]; then
+          echo "Error: Repository must include a tag with key '${TAG_KEY}' and one of the following values: ${REQUIRED_TAGS[*]}"
+          exit 1
+        fi
