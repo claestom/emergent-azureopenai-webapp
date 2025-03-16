@@ -126,3 +126,8 @@ Test the WebbApp:
 ```
 curl -X POST -H "Content-Type: application/json" -d "{\"query\": \"Explain me what Emergent Leuven is?\"}"  https://<WebAppName>.azurewebsites.net/
 ```
+### After the project, clean up the environment
+This will remove all the resources deployed to avoid costs after the project.
+```
+az group delete -n $ResourceGroup
+```
